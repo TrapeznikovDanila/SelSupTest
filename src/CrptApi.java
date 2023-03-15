@@ -37,7 +37,7 @@ public class CrptApi {
         }
     }
 
-    // Создание документа для ввода в оборот товара, произведенного в РФ
+    // Creation of a document for introduction goods from RF
     public synchronized String createDocumentToIntroduceGoodsFromRF(Document doc, String signature) {
         doc.setSignature(signature);
         String json = documentToJson(doc);
@@ -83,12 +83,12 @@ public class CrptApi {
         return response.body();
     }
 
-    // Другие типы запросов в рамках задания не разрабатывались
+    // Another request types haven't been developed
     private Object get(String path, String json) {
         return null;
     }
 
-    // Другие типы запросов в рамках задания не разрабатывались
+    // Another request types haven't been developed
     private Object put(String path, String json) {
         return null;
     }
@@ -98,7 +98,7 @@ public class CrptApi {
 
     }
 
-    // Фильтрация запросов к API
+    // Filtering API requests
     private synchronized boolean requestFilter() throws InterruptedException {
         boolean isTimeLeft = true;
         if (start != null) {
@@ -119,7 +119,7 @@ public class CrptApi {
         }
     }
 
-    // Получение идентификационного токена не было в задании
+    // There is no getting an identification token in te test task
     public void setToken(String token) {
         this.token = token;
     }
@@ -194,7 +194,7 @@ class Document {
     }
 }
 
-// в документации по работе с API нашёл только 3 метода
+// There are only three method types in API documentation
 enum HttpMethods {
     POST,
     GET,
